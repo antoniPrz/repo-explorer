@@ -1,3 +1,7 @@
+import './styles/global.scss';
+
 export function App(){
-    return <h1>holaaaaa</h1>
+
+    // throw new Error('esto se cayoooooooo');
+    return <h1>holaaaahohvdbdbohha111111</h1>
 }
