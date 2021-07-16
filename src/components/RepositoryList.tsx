@@ -18,7 +18,16 @@ import '../styles/repositories.scss'
 
 export function RepositoryList(){
 
-    const [repositories , setRepositories] = useState([]); 
+
+    interface repository{
+        name: string;
+        language: string;
+        html_url: string;
+        
+    }
+
+
+    const [repositories , setRepositories] = useState<repository[]>([]); 
 
     useEffect( () => {
         fetch('https://api.github.com/users/antoniprz/repos')
@@ -27,8 +36,7 @@ export function RepositoryList(){
     },[] );
 
 
-
-
+       
     return ( 
         <>
         <section className = "repository-list">
